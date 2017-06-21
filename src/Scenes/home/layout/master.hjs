@@ -1,0 +1,169 @@
+import React, { Component } from 'react';
+import logo from '../../../../public/images/logo-top.png';
+// import { Router, Route } from 'react-router';
+// import { Link  } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+// import history from '../../../history';
+import myLink from './myLink';
+
+
+class Master extends React.Component {
+	render() {
+		return (
+			<html>
+				<head>
+					<meta charset="utf8" />
+					<title>{this.props.title}</title>
+					
+				</head>
+				<body>
+					<Router>
+						<header>
+							<div className="top">
+								<div className="main">
+									<ul>
+										<li><Link to='/Info'> Thông tin tòa soạn </Link></li>
+										<li><Link to='/Post'> Gửi bài cộng tác </Link></li>
+										<li><Link to='/Media'> Media Kit </Link></li>
+										<li><Link to='/Image'> Ảnh đẹp </Link></li>
+										<li><Link to='/Video'> Video </Link></li>
+										<li><Link to='/admin'> Admin </Link></li>
+									</ul>
+									<ul>
+										<li><a href=""><i className="fa fa-facebook-square"></i></a></li>
+										<li><a href=""><i className="fa fa-google-plus "></i></a></li>
+										<li><a href=""><i className="fa fa-pinterest"></i></a></li>
+										<li><input placeholder="Nhập từ khóa tìm kiếm" /></li>
+									</ul>
+								</div>
+								{/* End main */}
+							</div>
+							{/* End top */}
+							<div className="mid main">
+								<Link to="/"><img src={logo} alt="" /> </Link>
+							</div>
+							{/* End mid */}
+							
+							<nav>
+								<ul className="main">
+									<li><a href=""> Tin tức </a>
+										<ul>
+											<li><a href="">Phóng sự </a></li>
+											<li><a href="">Pháp luật </a></li>
+										</ul>
+									</li>
+									<li><a href="tamsu"> Tâm sự </a></li>
+									<li><a href=""> Gia đình  </a></li>
+									<li><a href=""> Ngôi sao </a></li>
+									<li><a href=""> Thời trang </a></li>
+									<li><a href=""> Làm đẹp </a></li>
+									<li><a href=""> Sức khỏe </a></li>
+									<li><a href=""> Giáo dục </a></li>
+									<li><a href=""> Phong thủy </a></li>
+									<li><a href=""> Tử vi </a></li>
+									<li><a href=""> Xu hướng </a></li>
+								</ul>
+							</nav>
+							<div className="headding main">
+								<ul>
+									<li> <i className="myAnimation"></i> <a href="" > Tin tức 24h </a></li>
+									<li> <a href="" > Tỉ giá ngoại tệ </a></li>
+									<li> <a href="" > Giá vàng </a></li>
+									<li> <a href="" > Dự báo thời tiết </a></li>
+									<li> <a href="" > Tai nạn giao thông mới nhất </a></li>
+								</ul>
+							</div>
+
+							<Route path='\/' component={myLink.Home} />
+							<Route path="\/Info" component={myLink.Info} />
+							<Route path="\/Post" component={myLink.Post} />
+							<Route path="\/Image" component={myLink.Image} />
+							<Route path="\/Video" component={myLink.Video} />
+							<Route path="\/Media" component={myLink.Media} />
+							<Route path="\/Admin" component={myLink.Admin} />
+
+						</header>
+						{/* End header */}
+
+
+					</Router>
+					{this.props.children}
+					<footer>
+						<div className="sport main">
+							<div className="sport_head">
+								<a href=""> <i className="fa fa-life-ring" aria-hidden="true"></i> Đọc tin bóng đá </a>
+								
+							</div>
+							<div className="head"> 
+								<p> </p>
+								<ul>
+									<li> <a href=""> Nhan dinh bong da</a></li>
+									<li> <a href=""> Truc tiep bong da</a></li>
+									<li> <a href=""> Link sopcast</a></li>
+									<li> <a href="">Livescore </a></li>
+									<li> <a href="">Ket qua bong da truc tuyen </a></li>
+									<li> <a href="">Video bong da </a></li>
+								</ul>
+
+							</div>
+							<div className="video_content">
+								<div className="video_item">
+									<a href=""><img src={myLink.img} /></a>
+									<a href="">Nhận định Nga vs Bồ Đào Nha</a>
+								</div>
+								<div className="video_item">
+									<a href=""><img src={myLink.img} /></a>
+									<a href="">Nhận định Nga vs Bồ Đào Nha</a>
+								</div>
+								<div className="video_item">
+									<a href=""><img src={myLink.img} /></a>
+									<a href="">Nhận định Nga vs Bồ Đào Nha</a>
+								</div>
+								<div className="video_item">
+									<a href=""><img src={myLink.img} /></a>
+									<a href="">Nhận định Nga vs Bồ Đào Nha</a>
+								</div>
+								<div className="video_item">
+									<a href=""><img src={myLink.img} /></a>
+									<a href="">Nhận định Nga vs Bồ Đào Nha</a>
+								</div>
+								<div className="video_item">
+									<a href=""><img src={myLink.img} /></a>
+									<a href="">Nhận định Nga vs Bồ Đào Nha</a>
+								</div>
+							</div>
+						</div>
+
+						<div className="footer">
+							<div className="main">
+
+								<div className="item">
+									<p>© 2017 TamSuGiaDinh.vn</p>
+									<p>Tam su gia dinh: nơi chia sẻ những tâm sự của phụ nữ về cuộc sống hạnh phúc gia đình hàng ngày, hôn nhân, tình yêu vợ chồng. Những tâm sự thầm kín, tâm sự những điều khó nói trong gia đình sẽ được các chuyên gia tâm lý của tamsugiadinh.vn tư vấn tận tình..</p>
+									<p>Tại tamsugiadinh.vn bạn đọc có thể giãi bày những tâm sự buồn, chuyện phòng the, chuyện ngoại tình của vợ, chồng để được mọi người lắng nghe và chia sẻ.</p>
+								</div>
+								<div className="item">
+									<p>Demo by Hoàng kun</p>
+									<p>Địa chỉ: 377 Phạm Văn Đồng, Từ Liêm, Hà Nội</p>
+									<p>VP: Vinsofts</p>
+
+									<p>Liên hệ quảng cáo</p>
+									<p>Hotline: 0978.789.177 (Mr Hoàng)</p>
+									<p>Email: hoangsnow172@gmail.com</p>
+								</div>
+							</div>
+						</div>
+					</footer>
+					{/* End footer */}
+				</body>
+
+			</html>
+		);
+	}
+}
+
+export default Master;

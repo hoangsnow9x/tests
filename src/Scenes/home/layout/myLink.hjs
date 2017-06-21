@@ -1,0 +1,10 @@
+import Admin from '../../admin/index';
+import Home from '../../../app';
+import Image from '../../../Components/image';
+import Video from '../../../Components/video';
+import Media from '../../../Components/media';
+import Post from '../../../Components/post';
+import Info from '../../../Components/info';
+import img from '../../../../public/images/7.jpg';
+
+export default { Admin , Home, Image, Video, Media, Post, Info, img};
